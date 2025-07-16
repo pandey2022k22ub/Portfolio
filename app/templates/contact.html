@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block title %}Contact - Portfolio{% endblock %}
+{% block content %}
+<section class="py-5 contact-section" style="background: linear-gradient(120deg, #f8f9fa 60%, #e3e9f7 100%); min-height: 100vh;">
+  <div class="container">
+    <div class="row justify-content-center mb-4">
+      <div class="col-lg-10">
+        <blockquote class="blockquote text-center mb-4 animate-fade-in">
+          <p class="mb-0 fs-5">“Whether it’s building, debugging, or deploying — I’m just one message away.”</p>
+        </blockquote>
+      </div>
+    </div>
+    <div class="row g-5 align-items-stretch justify-content-center">
+      <!-- Contact Info Block -->
+      <div class="col-12 col-lg-5 animate-fade-in">
+        <div class="bg-white rounded-4 shadow p-4 h-100 d-flex flex-column justify-content-between">
+          <div>
+            <h3 class="fw-bold mb-4"><i class="bi bi-person-lines-fill me-2"></i>Let’s Connect</h3>
+            <div class="mb-3 d-flex align-items-center"><i class="bi bi-envelope-at me-2 text-primary"></i><a href="mailto:pandeyabhinavkumar27@gmail.com" class="text-decoration-none text-dark">pandeyabhinavkumar27@gmail.com</a></div>
+            <div class="mb-3 d-flex align-items-center"><i class="bi bi-telephone me-2 text-success"></i><span>+91 8235083084</span></div>
+            <div class="mb-3 d-flex align-items-center"><i class="bi bi-geo-alt me-2 text-danger"></i><span>Garhwa, Jharkhand, India</span></div>
+            <div class="mb-3 d-flex align-items-center"><i class="bi bi-github me-2 text-dark"></i><a href="https://github.com/pandey2022k22ub/" class="text-decoration-none text-dark" target="_blank">pandey2022k22ub</a></div>
+            <div class="mb-4 d-flex align-items-center"><i class="bi bi-linkedin me-2 text-primary"></i><a href="https://linkedin.com/in/abhinavkpandey" class="text-decoration-none text-dark" target="_blank">abhinavkpandey</a></div>
+          </div>
+          <div class="mt-3">
+            <a href="{{ url_for('static', filename='abhinav_resume.pdf') }}" class="btn btn-resume d-inline-flex align-items-center justify-content-center mx-auto mb-2" download style="min-width: 180px;">
+              <i class="bi bi-download me-2"></i>Download Resume
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Contact Form Block -->
+      <div class="col-12 col-lg-7 animate-fade-in">
+        <div class="card border-0 rounded-4 shadow-lg p-4 contact-form-card">
+          <div class="card-body">
+            <h3 class="fw-bold mb-4 text-center">Send a Message</h3>
+            <form id="contactForm" autocomplete="off" novalidate>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="fullName" placeholder="Full Name" required>
+                <label for="fullName"><i class="bi bi-person me-2"></i>Full Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="email" placeholder="Email" required>
+                <label for="email"><i class="bi bi-envelope me-2"></i>Email</label>
+              </div>
+              <div class="form-floating mb-3">
+                <textarea class="form-control" placeholder="Message" id="message" style="height: 120px" required></textarea>
+                <label for="message"><i class="bi bi-chat-dots me-2"></i>Message</label>
+              </div>
+              <button type="submit" class="btn btn-send-message d-inline-flex align-items-center justify-content-center mx-auto" style="min-width: 180px;">Send Message</button>
+              <div id="formSuccess" class="alert alert-success mt-3 d-none" role="alert">
+                <i class="bi bi-check-circle me-2"></i>Your message has been sent! Thank you.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% block scripts %}
+<script>
+  // Show success message on form submit (no backend logic)
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
+    const success = document.getElementById('formSuccess');
+    if(form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        success.classList.remove('d-none');
+        form.reset();
+        setTimeout(() => success.classList.add('d-none'), 4000);
+      });
+    }
+  });
+</script>
+{% endblock %}
+{% endblock %} 

@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block title %}Projects - Portfolio{% endblock %}
+{% block content %}
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5 animate-fade-in">My Projects</h2>
+    <div class="row g-4">
+      <!-- CRM Dashboard -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card project-card h-100 animate-fade-in">
+          <div class="card-body d-flex flex-column">
+            <div class="mb-3 text-center">
+              <i class="bi bi-kanban-fill fs-1 text-primary"></i>
+            </div>
+            <h5 class="card-title fw-bold mb-2">CRM Dashboard</h5>
+            <div class="mb-2">
+              <span class="badge bg-dark bg-gradient me-1 mb-1">MongoDB</span>
+              <span class="badge bg-info text-dark bg-gradient me-1 mb-1">Express.js</span>
+              <span class="badge bg-primary bg-gradient me-1 mb-1">React.js</span>
+              <span class="badge bg-success bg-gradient me-1 mb-1">Node.js</span>
+            </div>
+            <p class="card-text mb-3">A secure and scalable CRM dashboard with campaign management, real-time analytics, category-based filtering, and JWT authentication.</p>
+            <div class="mt-auto d-flex gap-2">
+              <a href="https://github.com/pandey2022k22ub/CRM" class="btn btn-outline-dark" target="_blank"><i class="bi bi-github me-1"></i>View Code</a>
+              <a href="https://crm-33pv.vercel.app/" class="btn btn-primary" target="_blank"><i class="bi bi-box-arrow-up-right me-1"></i>Live Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- AI Incident Dashboard -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card project-card h-100 animate-fade-in">
+          <div class="card-body d-flex flex-column">
+            <div class="mb-3 text-center">
+              <i class="bi bi-bar-chart-fill fs-1 text-success"></i>
+            </div>
+            <h5 class="card-title fw-bold mb-2">AI Incident Dashboard</h5>
+            <div class="mb-2">
+              <span class="badge bg-warning text-dark bg-gradient me-1 mb-1">Flask</span>
+              <span class="badge bg-primary bg-gradient me-1 mb-1">React.js</span>
+              <span class="badge bg-info text-dark bg-gradient me-1 mb-1">Chart.js</span>
+            </div>
+            <p class="card-text mb-3">A dashboard for monitoring AI safety incidents, featuring real-time filtering and analytics visualization.</p>
+            <div class="mt-auto d-flex gap-2">
+              <a href="https://github.com/pandey2022k22ub/Ai-incident-Dashboard07" class="btn btn-outline-dark" target="_blank"><i class="bi bi-github me-1"></i>View Code</a>
+              <a href="#" class="btn btn-primary disabled" tabindex="-1" aria-disabled="true"><i class="bi bi-box-arrow-up-right me-1"></i>Live Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Dalileo Bakery Website -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card project-card h-100 animate-fade-in">
+          <div class="card-body d-flex flex-column">
+            <div class="mb-3 text-center">
+              <i class="bi bi-bag-fill fs-1 text-warning"></i>
+            </div>
+            <h5 class="card-title fw-bold mb-2">Dalileo Bakery Website</h5>
+            <div class="mb-2">
+              <span class="badge bg-primary bg-gradient me-1 mb-1">React.js</span>
+              <span class="badge bg-light text-dark bg-gradient me-1 mb-1">HTML</span>
+              <span class="badge bg-info text-dark bg-gradient me-1 mb-1">CSS</span>
+              <span class="badge bg-warning text-dark bg-gradient me-1 mb-1">JavaScript</span>
+            </div>
+            <p class="card-text mb-3">A responsive e-commerce frontend for a bakery, with product browsing, real-time cart management, and smooth checkout UX.</p>
+            <div class="mt-auto d-flex gap-2">
+              <a href="https://github.com/pandey2022k22ub/Bakery-Website" class="btn btn-outline-dark" target="_blank"><i class="bi bi-github me-1"></i>View Code</a>
+              <a href="https://bakerywebsite-one.vercel.app/" class="btn btn-primary" target="_blank"><i class="bi bi-box-arrow-up-right me-1"></i>Live Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %} 
